@@ -3,7 +3,6 @@ const path = require('path')
 const resolve = require('path').resolve
 const build = resolve(__dirname, 'build')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
-const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -64,10 +63,6 @@ module.exports = {
         to: 'index.html' 
       },
     ]),
-
-    new OpenBrowserPlugin({
-      url: 'http://localhost:3000/'
-    }),
   ],
 
   resolve: {
